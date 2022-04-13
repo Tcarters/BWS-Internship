@@ -1,0 +1,14 @@
+.box {
+    padding: 30px;
+    height: 300px;
+    width: 300px;
+    border: 5px solid red;
+    box-sizing: content-box;
+    outline: 5px solid green;
+    outline-offset: 10px;
+    margin: 30px;
+}
+
+div {
+    display: block;
+}
