@@ -1,0 +1,50 @@
+ /* body {
+    opacity: 1 !important;
+    margin: 0;
+    /* background-color: #FFFFFF; 
+    height: 100%;
+    padding-bottom: 40px;
+ }  */
+
+/* .flo-generic-slides__slide-content {
+ box-sizing: border-box;
+ width: 100%;
+ transition: opacity .5s;
+ transition-timing-function: cubic-bezier(0.25,0.46,0.45,0.94);
+} */
+
+.header {
+    padding-top: 50px;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+}
+
+.fill {
+    background-image: url('./image/Drone_Gallery-4.jpg');
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+
+.fill img {
+    flex-shrink: 0;
+    width: 100vw;
+    height: 60vw;
+    /* min-width: 100%; */
+    /* min-height: 50%; */
+    object-fit: cover;
+}
+
+.bgimg {
+    background-image: url('./image/Drone_Gallery-4.jpg');
+    height: 250px;
+}
+
+.myheader {
+    width: 150%;
+    background-image:  url('./image/Drone_Gallery-4.jpg');
+}

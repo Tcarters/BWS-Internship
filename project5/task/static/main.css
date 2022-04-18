@@ -1,0 +1,20 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.fixed-header {
+    background-image: url('../image/Drone_Gallery-4.jpg');
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+    
+    /* width: 100%;
+    position: fixed;        
+
+    padding: 10px 0;
+    color: #fff; */
+}

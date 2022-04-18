@@ -1,0 +1,11 @@
+ <!-- <div class="flo-generic-slides__slide-content flo-block-slideshow-1__slide-content"> -->
+        <!-- <div class="flo-generic-slides__slide-img--wrapper flo-block-slideshow-1__slide-img flo-block-slideshow-1__slide-img--bgi"> -->
+
+            <img class="flo-generic-slides__slide-img--bgi"
+                 style="object-position: 50%"
+                 src="./image/Drone_Gallery-4.jpg"
+                 srcset="./image/Drone_Gallery-4-1200x799.jpg 1200w, ./image/Drone_Gallery-4.jpg 2048w, ./image/Drone_Gallery-4.jpg 2560w"
+                 sizes="(max-width: 768px) 580px, (max-width: 1024px) 1004px, 100vw"  alt="" />
+        <!-- </div> -->
+
+        <!-- </div> -->
