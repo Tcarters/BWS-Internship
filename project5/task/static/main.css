@@ -1,20 +1,393 @@
 .container {
-    width: 80%;
+    width: 180%;
     margin: 0 auto;
 }
 
 .fixed-header {
+    top: 0;
     background-image: url('../image/Drone_Gallery-4.jpg');
-    height: auto;
-    width: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden
-    
-    /* width: 100%;
-    position: fixed;        
+     /* height: 1200px;  */
+     /* width: 4300vh; */
+     background-repeat: no-repeat;
+     /* display: flex; */
+     overflow: hidden;
+     object-fit: cover;
+     background-size: 100% 100%;
+}
 
-    padding: 10px 0;
-    color: #fff; */
+.fixed-header img {
+    flex-shrink: 0;
+    width: 100vw;
+    height: 60vw;
+    object-fit: cover;
+}
+
+.myheader {
+    /* margin: 1 auto; */
+    /* z-index:  2; */
+    /* display: flex; */
+    flex-shrink: 0;
+    /* width: 196vh; */
+    height: 60vh;
+    object-fit: cover;
+    /* background:  url('../image/Drone_Gallery-4.jpg') no-repeat; */
+    /* background-size:  cover; */
+}
+
+/*
+	Creating a flexbox navbar.
+
+	In order to have the gradient background extend to the top
+	of the page and under the navbar, we need to set the navbar's 
+	position to relative and give it a z-index that's 
+	greater than the gradient's
+*/
+.navbar {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	position: fixed;
+	width: 90%;
+	height: 230px;
+	border-bottom: 1px ;
+    /* solid hsla(0, 0%, 100%, 0.2); */
+	z-index: 1;
+}
+
+/*
+	Use this container to set the maximum width
+	for the left / right navigation links.
+	
+	Set a max-width property to insure the left / right
+	links don't get farther apart with large screen sizes
+*/
+.container2 {
+	display: flex;
+	flex-flow: row nowrap;
+	width: 400%;
+	max-width: 2000px;
+	justify-content: space-around;
+	align-items: center;
+    /* position: relative; */
+}
+
+/*
+	The left and right nav containers also need to be flex containers
+*/
+.left-container, .right-container {
+	display: flex;
+	flex-flow: row nowrap;
+	width: 600px;
+	z-index: 3;
+}
+
+/*
+	So we can set them to their respective sides and maintain the space between them
+*/
+.left-container {
+    /* padding: auto; */
+    /* margin: 0; */
+    width: cover;
+	justify-content: flex-start;
+}
+
+.center-container {
+    text-transform: capitalize; 
+    font-size: 50px; 
+    color: aliceblue;
+    justify-content: center;
+}
+.right-container {
+    /* margin: 0; */
+    /* padding: 0; */
+    width: fit-content;
+	justify-content: flex-end;
+}
+
+/*
+	Set the UL's display to flex so we can space the links out.
+	Use align-itmes to vertically center the links inside of it's container.
+*/
+.nav-left, .nav-right {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	flex-basis: 300px;
+	align-items: center;
+	color: white;
+}
+
+.generala {
+	text-decoration: none;
+	font-family: BarlowSemiCondensed Bold;
+    /* font-size: 0.9875rem;  */
+    /* font-weight: normal; */
+    word-spacing: 30em;
+    line-height: 1.81em;
+	color: white;
+    display: inline-flex;
+    /* hsla(0, 0%, 100%, 0.7); */
+}
+
+.generala:hover {
+	color: #fff;
+}
+
+ul {
+    line-height: 1.6;
+    /* justify-content: center; */
+    list-style: none;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+li {
+    /* margin-right: 4rem; */
+    /* margin-left: 0; */
+}
+.subtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+
+}
+.submenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: red;
+    width: 100%;
+    z-index: 1;
+}
+
+.submenu a {
+    float: left;
+    color: white;
+    text-decoration: none;
+}
+
+.submenu a:hover {
+    background-color: aquamarine;
+    color: black;
+} 
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 160px;
+    padding: 1px 3px;
+}
+
+.dropbtn {
+    /* background-color: #4CAF50; */
+    color: white;
+    /* padding: 10px; */
+    /* font-size: 16px; */
+    /* border: none; */
+    cursor: pointer;
+    text-decoration: none;
+	font-family: BarlowSemiCondensed Bold;
+    font-size: 0.9875rem; 
+    font-weight: normal;
+    word-spacing: 3em;
+    /* word-wrap: normal; */
+    line-height: 1.81em;
+    display: inline-flex;
+  }
+
+.dropbtn:hover {
+    text-decoration-line: underline ;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 300px;
+    min-height: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 30px 46px;
+    text-decoration: none ;
+    display: block;
+    font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+    font-weight: normal;
+  }
+  
+
+  .dropdown-content a:hover {
+      text-decoration-line: underline ;
+      /* background-color: #f1f1f1; */
+}
+
+a::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 0.5rem);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    border-top: 1px solid;
+    width: calc(100% + 0.6875rem);
+    opacity: 0;
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+}
+
+center p {
+    font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+    letter-spacing: 6px;
+    color: #fff;
+}
+
+.divpart2 {
+    color: #3c3c3c;
+    background-color: #fafafa;
+    padding: 5rem 4.375rem;
+    position: flex;
+    height: 60vh;
+    width: 100vh;
+    /* top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+    margin: auto;
+    object-position: center; 
+    display: relative; 
+    justify-content: center; 
+    align-items: center;
+
+}
+
+/* .slider {
+    display: flex;
+    box-sizing: border-box;
+
+} */
+
+.filldiv {
+ top: 0;
+ height: 45.25rem ;
+ width: 402px;
+ display: flex;
+ position: relative;
+ /* left: 3px; */
+ z-index: 1;
+ /* opacity: 1; */
+ justify-content: space-around;
+ overflow-x: hidden;
+}
+
+.mysection {
+    width: 100vh;
+    height: 60vh;
+    position: absolute;
+    /* background-color: blue; */
+    object-fit: cover;
+    display: relative;
+}
+
+
+.div-left {
+    justify-content: flex-start;
+    float: left;
+    /* left: 50%; */
+    width: 50%;
+    /* background-color: yellow; */
+    object-fit: cover;
+
+}
+
+
+.div-left img {
+    height: 35.25rem;
+    border-style: none;
+    width: 100%;
+    display: flex;
+    border-style: none;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+
+
+.div-right {
+    justify-content: center;
+    /* position: c; */
+    float: right;
+    /* right: 50%; */
+    width:  50%;
+    /* background-color: red; */
+    text-align: center;
+    /* margin-right: 0; */
+    /* margin-left: auto; */
+    /* padding: 0; */
+    /* font-size: 19.07px; */
+
+}
+.underh2 {
+    word-spacing: 0.4em;
+    font-family: Overpass Light;
+    letter-spacing: 0em;
+    font-weight: normal;
+    margin-bottom: 2.25rem;
+}
+
+.div-linebar {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 0.5625rem;
+    letter-spacing: 0.44em;
+    word-spacing: 0em;
+    line-height: 1.77em;
+    font-weight: normal;
+}
+
+.first-number {
+    text-align: center;
+    font-family: RobotoMono Medium;
+    font-size: 0.5625rem;
+}
+
+.second-number {
+    text-align: center;
+    font-family: RobotoMono Medium;
+    font-size: 0.5625rem;
+    right: 0;
+}
+
+.bar {
+    height: 1px;
+    background: gray;
+    border: 0;
+    /* left: -4; */
+    /* width: 7.25rem; */
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 0.3125rem;
+    justify-content: center;
+    margin: .3125rem 0;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.bar::before, .bar::after {
+    content: " ";
+    margin:  auto;
+    flex: 1 1;
+    border-bottom:  1px solid #000;
 }
