@@ -396,7 +396,7 @@ center p {
     font-family: RobotoMono Medium;
     font-size: 0.5625rem;
     box-sizing: border-box;
-    margin-left: -140px;
+    margin-left: -195px;
 }
 
 .second-number {
@@ -405,7 +405,7 @@ center p {
     font-family: RobotoMono Medium;
     font-size: 0.5625rem;
     box-sizing: border-box;
-    margin-right: 100px;
+    margin-right: 160px;
     /* right: 0; */
     float: right;
 }

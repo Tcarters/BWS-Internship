@@ -1,0 +1,103 @@
+
+.myheader {
+    background-image: url('https://unsplash.com/photos/fsH1KjbdjE8/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8NHx8dW5pdmVyc2V8ZW58MHx8fHwxNjUwOTEyNjAy&force=true&w=1920');
+    display: relative;
+    text-align: center;
+    align-items: center;
+    height: 53vh;
+    object-fit: cover;
+    width: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /* margin-top: 24px; */
+}
+h3 {
+    text-decoration: none;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    font-size: 15px;
+}
+
+.myfooter {
+    text-align: center;
+    text-decoration: underline;
+    color: aqua;
+    bottom: -200px;
+    height: 50px;
+    width: 100%;
+    /* left: 0; */
+    /* margin-left: 50%; */
+    /* max-width: 60%; */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* background-color: gra; */
+}
+.myfooter span {
+    color: red;
+    text-align: center;
+    word-spacing: 1em;
+}
+
+.myh1{
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+    text-align: center;
+    align-items: center;
+    color: red;
+    font-size: 32px;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    line-height: 1.1;
+    justify-content: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}   
+
+.btnResult{
+    padding-top: 34px;
+    box-sizing: border-box;
+}
+.lead {
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+    font-size: 21px;
+    margin-left: 30px ;
+    margin-bottom: 20px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+p { 
+    margin: 0 0 10px;
+}
+
+.myp {
+    margin-left: 34px;
+    font-size: 24px;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+.btnclick {
+    background-color: white;
+    color: black;
+    border: 1.5px solid #555555;
+}
+
+.btnclick:hover {
+    background-color: #555555;
+    color: white;
+}

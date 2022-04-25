@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Hello welcome to game page </h2>
+    <script>
+        // let  num = 10;
+        // try { 
+        //     num = Number ( num * Math.random());
+        //     // DoesnotExist();
+        //     throw "Throwing something Here.."
+        // } catch (error) {   console.log("SHOWING Error !!! ", error);}
+        // finally {
+        //     console.log("The final word is", num);
+        // }
+
+        // // Use of 'this'
+        // const person5 = {
+        //     'name': 'John',
+        //     speak() {
+        //         console.log(`My name is ${this.name}`);
+        //     }
+        // }
+        // person5.speak();
+
+        // const counter = () => {
+        //     if (this.total === undefined){
+        //         this.total = 1
+        //     } else {
+        //         this.total++
+        //     } console.log('Running counter. Total is', this.total);
+        // }
+
+        // counter();
+        // counter();
+        // counter();
+
+        // const hello = function() {
+        //     return "Hello Kim"
+        // }
+        // const gret = hello();
+        // console.log(gret);
+
+        // const hello2 = () => {
+        //     console.log("Inside hello2")
+        // }
+        // hello2();
+        // console.log(hello2)
+
+        // const fun = (name) => {
+        //     console.log(`Welcome ${name}`);
+        // }
+        // fun("Tommy");
+
+        // function simpleFunct(param){
+        //     console.log(`Hello param in simpleFunction ${param}`);
+        // }
+
+        // simpleFunct("Orange");
+        // // -----------------
+
+        // const anonymousFunction = function(name4) {
+        //     this.name4 = prompt('Ur name is');
+        //     let age = prompt('Enter ur age: ');
+        //     age = Number(age);
+        //     console.log(`Your age is ${age}, and ur name: ${this.name4}`);
+        // }
+        // anonymousFunction();
+
+
+        // const arrowFunct1 = (p) => { console.log(`Hello, ${p}` ) ; }
+        // arrowFunct1("Sam");
+
+        // const arrowFunct2 =( name) => console.log(`My name ${name} `);
+        // arrowFunct2('JIm')
+
+        // // classes Objects
+        // class myClassName {
+        //     setName (name){
+        //         this.name = name; // "Katoon";
+        //     }
+        //     speak() {
+        //         console.log(`WOof woof, the dog named ${this.name}`);
+        //     }
+        // }
+        // const thing = new myClassName();
+        // thing.setName("Doggo MCdogface");
+        // thing.speak();
+
+
+        // // class constructor
+        // class Person {
+        //     constructor(name, secname){
+        //         this.name = name;
+        //         this.secname = secname ;//prompt('Enter ur sec name:');
+        //     }
+        //     greet() {
+        //         console.log(`Hello from ${this.name} and my secName ${this.secname}`);
+        //     }
+        //     setName(name) {
+        //         this.name= prompt("Enter ur sec Name");            }
+        // }
+        // const myn = new Person("Sam", "Fallilah ");
+        // myn.greet();
+        // myn.setName();
+        // myn.greet();
+
+        // JSON => JS Object Notation
+        // const myobject ={
+        //     'name': 'Carters',
+        //     'favFoods': ['Pizza', 'tacos', 'Salmon'],
+        //     'age': 32,
+        //     'children':[
+        //         {
+        //             'name': 'zephyr',
+        //             'age': 4,
+        //         },
+        //         {
+        //             'name': 'Tommy',
+        //             'age': 45
+        //         }
+        //     ]
+        // }
+        // const { name, age} = myobject;
+        // console.log('Myname:' + name + " " +  'and my age is' + " " + age );
+
+        // console.log(JSON.stringify(myobject)) ;
+
+        // AJAX zz7 zFetch API
+        fetch('http://swapi.dev/api/people/3/')
+            .then(Response => Response.json())
+            .then(data => {
+                console.log('Data got is: ', data);
+                console.log(`Name1: , ${data.name} `);
+            })
+            // .catch() = (err) => { console.log('Error got', err); }
+
+    </script>
+</body>
+</html>

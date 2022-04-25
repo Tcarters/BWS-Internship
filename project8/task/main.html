@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-8</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+
+<body style="background-color: aquamarine;">
+    <header class="myheader">
+        <center>
+            <h1 class="myh1">Welcome to Project - 8</h1>
+
+        </center>
+    </header>
+
+    <hr>
+
+    <div class="container">
+            <h2 class="myh1" style="text-align: center;">Find People Interests </h2><br />
+
+            <center>
+                <p class="myp">Hello Users, Click following buttons to get any users Information 
+                    <button id="click" class="button btnclick">
+                        <center>Click Here </center>
+                    </button>
+
+                </p>
+            </center>
+           
+            
+            <p class="lead btnResult">Results: </p> <br />
+
+            <!-- <div class="w3-row-padding w3-center w3-small" style="margin:0  --16px;">
+
+                <div class="w3-col l3 m3 s12">
+                    <h3 style="white-space: nowrap; text-decoration: none;margin-top: 1px; margin-bottom: 1px; font-size: 15px;" class="w3-button ws-hover-black ws-grey w3-block w3-round ">Films Instance </h3>
+                </div>
+
+                <div class="w3-col l3 m3 s12">
+                    <h3 style="text-decoration: none; margin-top: 1px; margin-bottom: 1px; font-size: 15px;" class="w3-button ws-hover-black ws-grey w3-block w3-round ">Species Instance</h3>
+                </div>
+
+                <div class="w3-col l3 m3 s12">
+                    <h3 style="text-decoration: none; margin-top: 1px; margin-bottom: 1px; font-size: 15px;" class="w3-button ws-hover-black  ws-grey w3-block w3-round ">Homeworld Instance </h3>
+                </div>
+
+                <div class="w3-col l3 m3 s12">
+                    <h3 style="text-decoration: none; margin-top: 1px; margin-bottom: 1px; font-size: 15px;" class=" w3-button ws-hover-black ws-grey w3-block w3-round ">Species Instance</h3>
+                </div>
+
+            </div> -->
+
+
+            <div id="footer" class="footer w3-container w3-white">
+                
+                    <div style="overflow:auto">
+                    <div class="bottomad">
+                    
+                        <div id="adngin-bottom_left-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
+                    
+                        <div id="adngin-bottom_right-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
+                    </div>
+                    </div>
+                
+                <!-- <hr> -->
+                <div class="w3-row-padding w3-center w3-small" style="margin:0 -16px;">
+                    <div class="w3-col l3 m3 s12">
+                         <a class="w3-button ws-grey ws-hover-black w3-block w3-round" href="javascript:void(0);" onclick="displayError();return false" style="white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px;font-size:15px;">Starships Instance</a>
+                    </div>
+                
+                    <div class="w3-col l3 m3 s12">
+                        <a class="w3-button ws-grey ws-hover-black w3-block w3-round" href="#" style="text-decoration:none; margin-top:1px; margin-bottom:1px; font-size:15px">Species Instance</a>
+                    </div>
+
+                    <div class="w3-col l3 m3 s12">
+                        <a class="w3-button ws-grey ws-hover-black w3-block w3-round" href="#" style="text-decoration:none; margin-top:1px; margin-bottom:1px; font-size:15px">HomeWorld Instance</a>
+                    </div>
+
+                    <div class="w3-col l3 m3 s12">
+                        <a class="w3-button ws-grey ws-hover-black w3-block w3-round" href="#" style="text-decoration:none; margin-top:1px; margin-bottom:1px; font-size:15px">Vehicles Instance</a>
+                    </div>
+                
+                </div>
+
+                <!-- <hr> -->
+                <!-- <div class="ws-grey w3-padding w3-margin-bottom" id="err_form" style="display:none;position:relative">
+                    <span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright w3-large">&times;</span>
+                
+                     <br>
+                </div> -->
+
+            <hr/>
+
+            <div class="w3-row w3-center w3-small">
+                <div class="w3-col l3 m6 s12">
+                    <div class="top10">
+                        <h2>StarShips Details </h2>
+                        <pre id="starships"> </pre>
+                    
+                    </div>
+                </div>
+            <!-- </div> -->
+
+                <div class="w3-col l3 m6 s12">
+                    <div class="top10">
+                        <h2>Species Details </h2>
+                        <pre id="species"> </pre>
+                    
+                    </div>
+                </div>
+            <!-- </div> -->
+
+                <div class="w3-col l3 m6 s12">
+                    <div class="top10">
+                        <h2>HomeWorld Details </h2>
+                        <pre id="homeworld"> </pre>
+                    
+                    </div>
+                </div>
+
+                <div class="w3-col l3 m6 s12">
+                        <div class="top10">
+                            <h2>Vehicles Details </h2>
+                            <pre id="vehicles"> </pre>
+                        
+                        </div>
+                </div>
+
+            </div> <!-- end w3-row-->
+
+    </div>
+    <hr>
+
+    <footer>
+        <div class="myfooter"> 
+         <center>
+            <span style="padding: 20px; padding-bottom: 50px;"> Module-8 TASK  <sup>&copy;</sup>2022 </span>
+        </center>
+    </div>
+    
+    </footer>
+
+
+    <script>
+        const resultStarships = document.querySelector("#starships");
+        const resultSpecies = document.querySelector("#species");
+        const resultHomeworld = document.querySelector("#homeworld");
+        const resultVehicle = document.querySelector("#vehicles");
+
+        const requestData = document.querySelector("#click");
+
+        const getData = async () => {
+            const cal = Math.floor( Math.random() * 10 );
+            const randNumber = Number( cal) ;
+
+            resultStarships.innerText = resultSpecies.innerText = resultHomeworld.innerText = resultVehicle.innerHTML = "Loading ....";
+
+            await  fetch(`https://swapi.dev/api/starships/${randNumber}`)
+                .then(( res ) => res.json() )
+                .then( (data) => {
+                    resultStarships.innerText = JSON.stringify(data, null, 2)
+                })
+                .catch( (error) => console.log('Unable to retrieve data', error));
+            
+            // let fetchSpecies = 
+            await fetch(`https://swapi.dev/api/species/${randNumber}`)
+               .then( res2 => res2.json())
+               .then(data2 => { resultSpecies.innerText = JSON.stringify(data2, null, 2 ) })
+               .catch( (err) => console.log('Unable to get species Data', err));
+
+            await  fetch(`https://swapi.dev/api/planets/${randNumber}`)
+                .then(( res3 ) => res3.json() )
+                .then( (data3) => {
+                    resultHomeworld.innerText = JSON.stringify(data3, null, 2) })
+                .catch( (error3) => console.log('Unable to retrieve data', error3));
+            
+            await  fetch(`https://swapi.dev/api/vehicles/${randNumber}`)
+                .then(( res4 ) => res4.json() )
+                .then( (data4) => {
+                    resultVehicle.innerText = JSON.stringify(data4, null, 2) })
+                .catch( (error4) => console.log('Unable to retrieve data', error4));
+
+        };
+
+        //add Event Listener for requestData
+        requestData.addEventListener("click", getData);
+    </script>
+</body>
+</html>
