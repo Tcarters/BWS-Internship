@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - 101</title>
+</head>
+<body>
+    
+    <div id="parent">
+        <strong>Boldered text </strong>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat repellat perspiciatis sapiente, laboriosam illo fuga eaque illum vitae quas dolor reprehenderit, sint sed quibusdam magnam eveniet. Nostrum laboriosam culpa nesciunt?
+
+        </p>
+    </div>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            console.log("jQuery is loaded !");
+            // $("div * ").empty().html("This was changed via jQuery");
+             const $parent = $("div#parent"); // $var means selector
+             $parent.html(<h1> New text </h1>)
+        })
+
+
+            // })
+    </script>
+</body>
+</html>

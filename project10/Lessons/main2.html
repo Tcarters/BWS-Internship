@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - 101</title>
+</head>
+<body>
+    
+ <h1>Our custom title </h1>
+ <button class="custom-class">This is a custom button </button>
+
+ <p class="custom-class">
+     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo culpa, consectetur nesciunt fugit placeat nisi. Sed fuga expedita ipsa minus quis quidem, odit, at atque enim natus a culpa sapiente!
+
+ </p>
+ 
+ <p id="customId">
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, animi. Corporis, veritatis voluptatibus. Magni ipsum corporis debitis necessitatibus facilis eum, ut, ab, consequuntur assumenda accusamus doloribus ducimus delectus unde. Soluta?
+
+ </p>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("h1, p").text("Changed via jQuery #2 !");
+            $("p.custom-class").text("Changed again #3")
+            // $("p").text("<strong>this is boldered replaced </strong>");
+            // $("h1.customClassName").text("This was changed via jQuery");
+        });
+    </script>
+</body>
+</html>
