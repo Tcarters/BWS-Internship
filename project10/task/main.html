@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-10  </title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-image: url(https://images.unsplash.com/photo-1523213154665-19efef0d633c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTl8NDQ1MjY2fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60);">
+    
+    <header class="myheader">
+        <center>
+            <h1 class="myh1">Welcome to Project - 10</h1>
+
+        </center>
+    </header>
+
+    <hr>
+
+    <div class="container">
+            <h2 class="myh1" style="text-align: center;">Find People Interests </h2><br />
+
+            <center>
+                <p class="myp">Hello Users, Click following buttons to get any users Information 
+                    <button id="click" class="button btnclick">
+                        <center>Click Here </center>
+                    </button>
+
+                </p>
+            </center>
+           
+            
+            <p class="lead btnResult">Results: </p> <br />
+
+            <div class="row" style="background-color: antiquewhite;">
+                <div class="column">
+                    <h2> User Name: </h2>
+                    <center>
+                        <h5 id="display-name"></h5>
+                    </center>
+
+                </div>
+
+                <div class="column-right">
+                    <h2> Image about User: </h2>
+                    <center>
+                        <pre id="display-img"></pre>
+                    </center>
+                </div>
+
+            </div>
+            
+
+    <footer>
+        <div class="myfooter"> 
+         <center>
+            <span style="padding: 20px; padding-bottom: 50px; font-size: 30px"> Module-10 TASK  <sup>&copy;</sup>2022 </span>
+        </center>
+    </div>
+    
+    </footer>
+
+
+    <script>
+        const resultName = document.querySelector("#display-name");
+        const resultImg = document.querySelector("#display-img");
+    
+
+        const requestData = document.querySelector("#click");
+
+        const getData = async () => {
+            const cal = Math.ceil( Math.random() * 88 );
+            const randNumber = Number( cal) ;
+
+            let mydata
+
+            resultName.innerText = resultImg.innerText = "Loading ....";
+
+            await  fetch(`https://akabab.github.io/starwars-api/api/id/${randNumber}.json`)
+                .then(( res ) => res.json() )
+                .then( (data) => {
+                    mydata = JSON.stringify(data) //, null, 2)
+                    // resultName.innerText = JSON.parse(mydata)
+                    
+                })
+                .catch( (error) => console.log('Unable to retrieve data', error));
+
+                let allData = JSON.parse(mydata);
+                let myimg = '<img src="' + allData.image + ' " />' 
+
+                resultName.innerText = allData.name
+                resultImg.innerHTML = myimg
+
+
+        };
+
+        //add Event Listener for requestData
+        requestData.addEventListener("click", getData);
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - 101</title>
+
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            margin: 5px auto;
+        }
+
+        .box:hover {
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- <div class="box">
+        Inside divider..
+    </div> -->
+
+        <input type="text" class="select-me" value="Hello world input">
+        <input type="text" class="select" value="Type in here ">
+            <!-- <button> Click me </button> -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // console.log("jQuery is loaded !");
+            // $(".box")
+            
+            //     .on("mouseenter", function() {
+            //         console.log("Your mouse is hovering over this box ...")
+            //             })
+            //     .on("mouseleave", () => console.log("You left the box area...") )
+
+            
+            $(".select-me").on("keyup", function() {
+                console.log( $(this).val() )
+                // const $input = $(".select-me")
+                // console.log("You pressed a key!. ", $input.val() )
+            })
+        })
+    </script>
+</body>
+</html>

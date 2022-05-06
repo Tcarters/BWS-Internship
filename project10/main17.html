@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - 101</title>
+
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            margin: 5px auto;
+        }
+
+        .box:hover {
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- <div class="box">
+        Inside divider..
+    </div> -->
+
+       <form action="">
+                <input type="text"name="name2"  class="select" placeholder=" ur name"> -->
+                <button type="submit"> Submit this form </button>
+
+       </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // console.log("jQuery is loaded !");
+            $("form").on("submit", function(event) {
+                event.preventDefault()
+                console.log("Form was not submitted");
+            })
+           
+        })
+    </script>
+</body>
+</html>

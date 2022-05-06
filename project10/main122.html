@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - 101</title>
+</head>
+<body>
+    
+    
+    <h1 class="customClassName" id="customId">
+        hello from h1
+
+    </h1>
+
+    <div class="id1">
+        Inside divider..
+    </div>
+
+    <button> Click me </button>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // console.log("jQuery is loaded !");
+            
+            
+            //Method 1
+            // $("button").click(function() {
+            //     console.log("I am clicked! ")
+            // })
+
+            //Method 2
+            // $("button").on("click", function() {
+            //     console.log("this is clickable too")
+            // } )
+
+            // // Method 3
+            // $(document).on("click", "button", function() {
+            //     console.log("Clicked also with method3 ")
+            // })
+                $("button").on("click", function() {
+                                console.log("this is clickable too")
+                            } )
+            const $parent =$(".id1");
+            $parent.html("<button> Click me dynamic button</button>");
+            
+        })
+    </script>
+</body>
+</html>

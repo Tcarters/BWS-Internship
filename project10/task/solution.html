@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 101 </title>
+
+    <style>
+        h1{
+            text-align: center;
+            text-decoration: underline;
+            font-family: sans-serif;
+        }
+        button{
+            display: block;
+            margin: auto;
+        }
+        img {
+            width: 200px;
+            height: auto;
+            box-shadow: 10px 20px 5px #000000;
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <button>Generate Character</button>
+    <h1 class="name"></h1>
+    <img src="" class="character-img" alt="image">
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready( () => {
+            $("button").on("click", function() {
+                const randNumber = Math.ceil( Math.random() * 80 )
+                $.get(`https://akabab.github.io/starwars-api/api/id/${randNumber}.json`, (data) => {
+                    console.log(data['name'])
+                    $("h1.name").text(data['name'])
+                    $(".character-img").attr("src", data['image'])
+                })
+            })
+        })
+    </script>
+</body>
+</html>

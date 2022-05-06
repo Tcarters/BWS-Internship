@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - 101</title>
+
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            margin: 5px auto;
+        }
+
+        .box:hover {
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- <div class="box">
+        Inside divider..
+    </div> -->
+
+        <input type="text" value=" ">
+
+        <!-- <input type="text" class="select" value="Type in here "> -->
+            <!-- <button> Click me </button> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // console.log("jQuery is loaded !");
+           $("input").on("blur", function() {
+               console.log("YOU BLURED AWAY FROM THIS INPUT AREAAA..")
+            //    console.log("Ans here..: ", $(this).val()  )
+            let websiteUrl = $(this).val()
+            if ( websiteUrl.substr(0,4) !== "http") {
+                websiteUrl = `http://${websiteUrl}`
+            }
+            $(this).val(websiteUrl)
+           })
+        })
+    </script>
+</body>
+</html>
