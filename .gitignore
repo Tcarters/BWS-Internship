@@ -1,3 +1,8 @@
 *.zip
 
 garbage.*
+
+node_modules/
+
+project11/Task/app-project/node_modules/
+project11/react-101/my-app/node_modules/
