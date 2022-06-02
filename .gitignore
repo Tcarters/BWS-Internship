@@ -6,3 +6,9 @@ node_modules/
 
 project11/Task/app-project/node_modules/
 project11/react-101/my-app/node_modules/
+
+project11_ReactJS/Task/app-project/node_modules/
+project11_ReactJS/react-101/my-app/node_modules/
+
+project11_ReactJS/Task/app-project/package*
+project11_ReactJS/react-101/my-app/package*
