@@ -4,8 +4,12 @@
 
 {%  block body %}
 
-    Stuff in here from home.html
+    <!-- Stuff in here from home.html -->
 
     <h1>This is our Home page </h1>
-    <h2> {{  my_thing }}</h2>
+    {% for post in posts %}
+         {{ post.text }} ..
+        <hr/>
+    {%endfor%}
+    <h2> {{  posts }}</h2>
 {% endblock %}
