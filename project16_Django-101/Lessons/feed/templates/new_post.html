@@ -3,21 +3,17 @@
 {% block title %} Upload a new Image  {% endblock %}
 
 {% block body %}
-    <center> 
-        <a href="{% url 'feed:index' %}">&larr; Go Back </a>
-
-        <h2>Form  Page </h2>
-        <br >
-
-      
-
-        <form method="post" action="" enctype="multipart/form-data">
+        <!-- <center>  <h1>Form  Page </h1>  </center>  -->
+        <form method="post" action="" 
+              enctype="multipart/form-data"
+              class="col-sm-4 offset-4 py-5 my-5"
+        >       
+         <h2> Upload an Image </h2>
                 {% csrf_token %}
                 {{ form.as_p }}
                 <div>
-                    <button type="submit">submit </button>
+                    <button type="submit" class="btn btn-lg btn-success">Submit Form </button>
                 </div>
-
-        </form>
-     </center>
+        </form>       
+         <a href="{% url 'feed:index' %}">&larr; Go Back </a>
 {% endblock %}

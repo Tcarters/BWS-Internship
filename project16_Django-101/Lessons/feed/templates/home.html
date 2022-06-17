@@ -5,35 +5,52 @@
 
 {%  block body %}
 
-    <!-- Stuff in here from home.html -->
-
     <center> 
         <h1>Home page </h1>
     </center> 
     
-    <a href="{% url 'feed:post' %}" > Add a new Post &rarr; </a>
+    <a href="{% url 'feed:post' %}" > Add a new Post &rarr;</a>
+    <hr>
+    <div class="row">
+    
+        {% for post in posts %}
+            <div class="col-sm-6 col-md-4">
+                 <div class="card  mb-3 " style="margin-bottom: 3;">
 
-    <hr >
+                    {% thumbnail post.image "300x300" crop="center" as im %}
+                        <img class="card-img-top" alt="mypic" 
+                            src="{{ im.url }}" >
+                    {% endthumbnail %}
+                            <!-- width="{{ im.width }}"
+                            height="{{ im.height }}">
+                                <img src="..." class="card-img-top" alt="..."> -->
 
-    {% for post in posts %}
+                    <div class="card-body">
+                        <!-- <h5 class="card-title">Image Title </h5> -->
+                        <p class="card-text">Text:  {{post.text }}.</p>
+                        <a href="{% url 'feed:detail' post.id %}" class="btn btn-primary"> View Full Image </a>
+                    </div>
+                    <br>
+                </div>
+            </div>
 
-        <!-- <a href="/detail/{{post.id}}/"> View Details </a> <br> -->
-       
-
-        <a href="{% url 'feed:detail' post.id %}" style="display: inline-block;"> 
-            <!-- View details </a> <br> -->
-
-                Name : {{ post.text }} .. <br><br >
-         <!-- {{ post.image }} -->
-
-         <!-- <img src="{{ post.image.url }}" /> -->
-
-                {% thumbnail post.image "300x300" crop="center" as im %}
-                    <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
-                {% endthumbnail %}
-        </a>
-
-        <hr/>
-    {%endfor%}
+            {% empty %}
+                <div class="col-sm-6 offset-3 text-center py-5 my-5">
+                    <h3>Welcome !</h3>
+                    <p>Add your First image? </p>
+                    <a href="{% url 'feed:post' %}" class="btn btn-lg btn-success"> Upload an Image </a>
+                </div>
+            
+        {%endfor%}
+    </div>
     <!-- <h2> {{  posts }}</h2> -->
 {% endblock %}
+
+
+            <!-- <a href="/detail/{{post.id}}/"> View Details </a> <br> -->   
+            <!-- <a href="{% url 'feed:detail' post.id %}" style="display: inline-block;"> 
+            View details </a> <br>
+                    Name : {{ post.text }} .. <br><br >
+            {{ post.image }}
+            <img src="{{ post.image.url }}" />
+            </a> -->
