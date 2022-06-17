@@ -4,7 +4,7 @@
 
 #Use class based views
 
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, DetailView
 # from matplotlib.style import context
 
 from .models import Post
@@ -17,3 +17,8 @@ class HomePageView(TemplateView):
         # context['my_thing'] = "Hello world :P this is dynamic"
         context['posts'] = Post.objects.all()
         return context
+
+
+class PostDetailView(DetailView):
+    template_name = "detail.html"
+    model = Post
