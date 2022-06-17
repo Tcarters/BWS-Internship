@@ -7,17 +7,31 @@
 
     <!-- Stuff in here from home.html -->
 
-    <h1>This is our Home page </h1>
+    <center> 
+        <h1>Home page </h1>
+    </center> 
+    
+    <a href="{% url 'feed:post' %}" > Add a new Post &rarr; </a>
+
+    <hr >
+
     {% for post in posts %}
-         {{ post.text }} .. <br>
+
+        <!-- <a href="/detail/{{post.id}}/"> View Details </a> <br> -->
+       
+
+        <a href="{% url 'feed:detail' post.id %}" style="display: inline-block;"> 
+            <!-- View details </a> <br> -->
+
+                Name : {{ post.text }} .. <br><br >
          <!-- {{ post.image }} -->
 
          <!-- <img src="{{ post.image.url }}" /> -->
 
-        {% thumbnail post.image "300x300" crop="center" as im %}
-            <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
-        {% endthumbnail %}
-
+                {% thumbnail post.image "300x300" crop="center" as im %}
+                    <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+                {% endthumbnail %}
+        </a>
 
         <hr/>
     {%endfor%}

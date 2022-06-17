@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %} Upload a new Image  {% endblock %}
+
+{% block body %}
+    <center> 
+        <a href="{% url 'feed:index' %}">&larr; Go Back </a>
+
+        <h2>Form  Page </h2>
+        <br >
+
+      
+
+        <form method="post" action="" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div>
+                    <button type="submit">submit </button>
+                </div>
+
+        </form>
+     </center>
+{% endblock %}
