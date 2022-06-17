@@ -5,5 +5,14 @@
 {% block body %}
     <center> 
         <h2>This is the Detail Page </h2>
+        <br >
+
+        <h3>Post Name </h3> {{ object }} <br >
+
+        <h3>Text </h3> {{ object.text }}
+
+        <h3> Image: </h3>  
+        <img src={{ object.image.url }} alt="pic" style="width: 100%; height: auto " />
+
      </center>
 {% endblock %}
