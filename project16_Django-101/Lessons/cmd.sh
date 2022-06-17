@@ -11,3 +11,4 @@ python manage.py makemigrations #===> to update setting after writing new files
 pipenv install Django  #==> To install an env for a django project
 
 pip show Django  #==> To show Django info
+pipenv shell   #==> To activate the shell environment
