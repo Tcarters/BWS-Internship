@@ -3,9 +3,12 @@
 # Create your views here.
 
 #Use class based views
+# from email import message
+from django.contrib import messages
 
 from django import forms
 from django.views.generic import TemplateView, DetailView, FormView
+# from requests import request
 # from matplotlib.style import context
 
 from .forms import PostForm
@@ -31,6 +34,11 @@ class AddPostView(FormView):
     form_class = PostForm 
     success_url = "/"
 
+    def dispatch(self, request, *args, **kwargs):
+        self.request = request
+        return super().dispatch(request, *args, **kwargs)
+
+
     def form_valid(self, form):
         print("This was  valid !!!!")
         print(form.cleaned_data['text'])
@@ -40,4 +48,5 @@ class AddPostView(FormView):
             text = form.cleaned_data['text'],
             image = form.cleaned_data['image']
         )
+        messages.add_message(self.request, messages.SUCCESS, 'Your post was successfull ')
         return super().form_valid(form)
