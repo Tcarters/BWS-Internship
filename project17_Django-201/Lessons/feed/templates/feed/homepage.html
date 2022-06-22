@@ -5,4 +5,13 @@
 {% endblock %}
 
 
-{% block body %}This is from the homePage {% endblock %}
+{% block body %}
+    {% for post in posts %}
+
+        POST:    {{ post.text }} writtent on {{ post.date }}
+        <br >
+
+
+    {% endfor %}
+
+{% endblock %}
