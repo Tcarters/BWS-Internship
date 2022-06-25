@@ -31,9 +31,14 @@
       {% if request.user.is_authenticated %}
 
         <li>
-            <a href="{% url 'feed:new_post' %}" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800 js-toggle-modal">
-              <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-700"><i class="bx bx-layer-plus"></i></span>
-              <span class="text-sm font-medium">New post</span>
+            <a href="{% url 'feed:new_post' %}" 
+               class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800 js-toggle-modal">
+              
+                <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-700">
+                    <i class="bx bx-layer-plus"></i>
+                </span>
+               
+                <span class="text-sm font-medium">New post</span>
             </a>
         </li>   
 
@@ -59,7 +64,7 @@
 
   <div class="p-16">
     {% block body %}
-        {% block content %}{% endblock %}
+        {% block content %} {% endblock %}
     {% endblock %}
   </div>
 
@@ -80,7 +85,7 @@
                   New Post 
               </div>
 
-              <svg class="ml-auto fill-current text-gray-700 w-6 h-6 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+              <svg class="ml-auto fill-current text-gray-700 w-6 h-6 cursor-pointer js-toggle-modal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
                 <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"/>
               </svg>
 
@@ -88,8 +93,14 @@
 
             <hr>
 
-            <div class="">
+            <div class="w-full">
               {# TODO  #}
+              <textarea class="border-2 border-blue-500 my-6  w-full js-post-text" 
+                        rows="3" placeholder="Enter your Post Text"
+                        maxlength="255" data-post-url="{% url 'feed:new_post' %}">
+
+              </textarea>
+
             </div>
 
             <hr>

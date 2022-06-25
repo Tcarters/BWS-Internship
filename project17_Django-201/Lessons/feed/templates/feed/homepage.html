@@ -8,10 +8,15 @@
 
 
 {% block body %}
-    {% for post in posts %}
 
-        {% include "includes/post.html" with post=post show_detail_link=True %}
+        <div id="posts-container">
+    
+            {% for post in posts %}
 
-    {% endfor %}
+                    {% include "includes/post.html" with post=post show_detail_link=True %}
+                    
+            {% endfor %}
+
+        </div>
 
 {% endblock %}

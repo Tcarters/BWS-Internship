@@ -36,6 +36,8 @@ $(document).on("click", ".js-toggle-modal", function(e) {
 })
 .on("click", ".js-submit", function(e) {
     e.preventDefault()
+    console.log("Submit me?")
+    
     const text = $(".js-post-text").val().trim()
     const $btn = $(this)
 
