@@ -22,3 +22,5 @@ main-old*
 project17_Django-201/Lessons/db.sqlite3
 
 project17_Django-201/Lessons/media/
+
+project17_Django-201/Lessons/static/

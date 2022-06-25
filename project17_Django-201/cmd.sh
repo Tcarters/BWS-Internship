@@ -13,4 +13,7 @@ python3 manage.py runserver 1234
 python3 manage.py startapp feed  #===> Start a new App
 
 pip install django-allauth OR pipenv install django-allauth # To install django-allauth package.
+
 python3 manage.py startapp folder-name 
+
+python3 manage.py collectstatic OR python manage.py collectstatic --no-input
